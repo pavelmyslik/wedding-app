@@ -38,7 +38,7 @@ export default function Accommodation() {
         </header>
 
         <div className="space-y-10">
-          {accommodations.map((hotel, index) => (
+          {accommodations.map((hotel) => (
             <article key={hotel.id} className="border-b border-[#D4B083]/20 pb-8 last:border-0">
               <h3 className="text-2xl font-semibold text-[#D4B083] mb-1">{hotel.name}</h3>
               <p className="text-[#222222] italic mb-3 text-sm">{hotel.description}</p>

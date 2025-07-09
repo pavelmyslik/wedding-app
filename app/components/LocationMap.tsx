@@ -62,7 +62,7 @@ export default function LocationMap() {
             <div className="mt-6 p-4 bg-[#FAF8F5] border border-[#D4B083]/10 rounded-md">
               <h4 className="text-lg font-semibold text-[#D4B083] mb-2">Tip pro navigaci</h4>
               <p className="text-[#444] text-base">
-                Do GPS zadejte: <span className="font-semibold">"Slatina 1, Hostouň"</span><br />
+                Do GPS zadejte: <span className="font-semibold">Slatina 1, Hostouň</span><br />
                 nebo použijte souřadnice pro přesnější navigaci.
               </p>
             </div>
