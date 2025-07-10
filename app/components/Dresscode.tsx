@@ -2,6 +2,7 @@ export default function DressCode() {
   return (
     <section id="dresscode" className="py-20 px-6 bg-[#F7F5F2] text-[#222222] font-serif max-w-4xl mx-auto">
       <h2 className="text-4xl font-semibold text-[#D4B083] mb-6 text-center">Dress Code</h2>
+      <div className="w-16 h-0.5 bg-[#D4B083] mx-auto mb-6 rounded"></div>
       <div className="border-b border-[#D4B083]/30 mb-8 w-24 mx-auto rounded"></div>
 
       <p className="mb-6 leading-relaxed text-lg">
