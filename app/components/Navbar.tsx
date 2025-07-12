@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const sections = [
   { id: "hero", label: "Úvod" },
   { id: "location", label: "Místo konání" },
-  { id: "dresscode", label: "Dress Code" },
+  { id: "dresscode", label: "Dresscode" },
   { id: "accommodation", label: "Ubytování" },
 ];
 
@@ -28,7 +28,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
