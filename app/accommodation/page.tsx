@@ -10,7 +10,7 @@ export default function Page() {
     },
     {
       id: 2,
-      name: "Penzion Mutěnín",
+      name: "Penzion Mutěnín (6 km)",
       address: "Mutěnín 35, 345 25 Mutěnín",
       phone: "+420 604 252 323",
       website: "https://www.penzion-mutenin.cz",
@@ -18,7 +18,7 @@ export default function Page() {
     },
     {
       id: 3,
-      name: "Penzion Pohoda",
+      name: "Penzion Pohoda (19 km)",
       address: "Hora Svatého Václava 17 345 22 Poběžovice",
       phone: "+420 739 085 254",
       website: "https://www.penzion-mutenin.cz",
