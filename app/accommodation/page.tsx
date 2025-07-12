@@ -1,4 +1,4 @@
-export default function Accommodation() {
+export default function Page() {
   const accommodations = [
     {
       id: 1,
@@ -35,7 +35,6 @@ export default function Accommodation() {
           <p className="text-base text-[#222222] font-serif leading-relaxed">
             Pro vaše pohodlí jsme připravili výběr kvalitních ubytovacích zařízení v blízkosti místa konání.
           </p>
-          <button className="px-6 py-2 mt-12 bg-[#222222] text-white rounded-full uppercase tracking-widest text-sm hover:bg-[#D4B083] transition cursor-pointer">více informací</button>
         </div>
 
         <div className="space-y-10">

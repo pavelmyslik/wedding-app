@@ -1,6 +1,7 @@
 import Accommodation from "@/app/components/Accomodation";
 import LocationMap from "@/app/components/LocationMap";
 import DressCode from "@/app/components/Dresscode";
+import Navbar from "@/app/components/Navbar";
 
 export default function Home() {
   return (
@@ -8,9 +9,10 @@ export default function Home() {
       <section id="hero" className="min-h-[60vh] bg-[url('/images/banner-lp.png')] bg-cover bg-center flex flex-col items-center justify-center text-center px-4r">
       </section>
 
+      <Navbar />
       <LocationMap />
-      <Accommodation />
       <DressCode />
+      <Accommodation />
 
 
       <footer className="py-8 text-center text-sm text-white bg-black">
