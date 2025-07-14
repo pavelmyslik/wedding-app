@@ -28,7 +28,7 @@ export default function Countdown() {
 
   return (
     <div className="text-center py-10">
-      <h2 className="text-2xl md:text-3xl font-serif text-[#D4B083] mb-4">Zbývá do svatby</h2>
+      <h2 className="text-2xl md:text-3xl font-serif text-[#D4B083] mb-4">Do svatby zbývá:</h2>
       <div className="flex justify-center gap-6 text-lg md:text-xl font-serif text-[#222]">
         <div className="text-center">
           <div className="text-3xl font-bold">{timeLeft.days}</div>
