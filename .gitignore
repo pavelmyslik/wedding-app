@@ -42,3 +42,4 @@ next-env.d.ts
 .tool-versions
 
 /app/generated/prisma
+.env*.local
