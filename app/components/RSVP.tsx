@@ -3,16 +3,45 @@ import { useState } from 'react';
 
 export default function RsvpForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{
+    name?: string;
+    attendance?: string;
+  }>({});
   const [submitStatus, setSubmitStatus] = useState<{
     success?: boolean;
     message?: string;
   }>({});
 
+  const validateForm = (formData: FormData): boolean => {
+    const newErrors: { name?: string; attendance?: string } = {};
+
+    const name = formData.get('name') as string;
+    const attendance = formData.get('attendance') as string;
+
+    if (!name || name.trim() === '') {
+      newErrors.name = 'Prosím vyplňte své jméno';
+    }
+
+    if (!attendance) {
+      newErrors.attendance = 'Prosím vyberte, zda se zúčastníte';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrors({});
 
     const formData = new FormData(e.currentTarget);
+
+    if (!validateForm(formData)) {
+      setIsSubmitting(false);
+      return;
+    }
+
     const data = {
       name: formData.get('name'),
       attendance: formData.get('attendance') === 'yes',
@@ -28,9 +57,9 @@ export default function RsvpForm() {
         body: JSON.stringify(data),
       });
 
-        if (!response.ok) {
-            throw new Error('Nastala chyba při odesílání formuláře.');
-        }
+      if (!response.ok) {
+        throw new Error('Nastala chyba při odesílání formuláře.');
+      }
 
       setSubmitStatus({
         success: true,
@@ -63,32 +92,44 @@ export default function RsvpForm() {
               </div>
           )}
 
-          <form className="space-y-6 text-left" onSubmit={handleSubmit}>
+          <form className="space-y-6 text-left" onSubmit={handleSubmit} noValidate>
             <div>
-              <label className="block mb-1 text-sm text-[#D4B083] font-medium">Vaše jméno</label>
+              <label className="block mb-1 text-sm text-[#D4B083] font-medium">
+                Vaše jméno <span className="text-red-500">*</span>
+              </label>
               <input
                   type="text"
                   name="name"
-                  className="w-full border border-[#D4B083]/40 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D4B083] bg-white"
+                  className={`w-full border ${errors.name ? 'border-red-500' : 'border-[#D4B083]/40'} rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D4B083] bg-white`}
                   required
               />
+              {errors.name && (
+                  <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+              )}
             </div>
 
             <div>
-              <label className="block mb-1 text-sm text-[#D4B083] font-medium">Zúčastníte se?</label>
+              <label className="block mb-1 text-sm text-[#D4B083] font-medium">
+                Zúčastníte se? <span className="text-red-500">*</span>
+              </label>
               <select
                   name="attendance"
-                  className="w-full border border-[#D4B083]/40 rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4B083]"
+                  className={`w-full border ${errors.attendance ? 'border-red-500' : 'border-[#D4B083]/40'} rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4B083]`}
                   required
               >
                 <option value="">-- Vyberte --</option>
                 <option value="yes">Ano, s radostí přijdu</option>
                 <option value="no">Bohužel se nezúčastním</option>
               </select>
+              {errors.attendance && (
+                  <p className="mt-1 text-sm text-red-500">{errors.attendance}</p>
+              )}
             </div>
 
             <div>
-              <label className="block mb-1 text-sm text-[#D4B083] font-medium">Zpráva pro novomanžele</label>
+              <label className="block mb-1 text-sm text-[#D4B083] font-medium">
+                Zpráva pro novomanžele <span className="text-gray-400">(nepovinné)</span>
+              </label>
               <textarea
                   name="message"
                   rows={4}
