@@ -87,7 +87,7 @@ export default function RsvpForm() {
           </p>
 
           {submitStatus.message && (
-              <div className={`mb-6 p-4 rounded ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              <div className={`mb-6 p-4 rounded ${submitStatus.success ? 'bg-green-100 text-green-300' : 'bg-red-100 text-red-300'}`}>
                 {submitStatus.message}
               </div>
           )}
@@ -95,26 +95,26 @@ export default function RsvpForm() {
           <form className="space-y-6 text-left" onSubmit={handleSubmit} noValidate>
             <div>
               <label className="block mb-1 text-sm text-[#D4B083] font-medium">
-                Vaše jméno <span className="text-red-500">*</span>
+                Vaše jméno <span className="text-red-300">*</span>
               </label>
               <input
                   type="text"
                   name="name"
-                  className={`w-full border ${errors.name ? 'border-red-500' : 'border-[#D4B083]/40'} rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D4B083] bg-white`}
+                  className={`w-full border ${errors.name ? 'border-red-300' : 'border-[#D4B083]/40'} rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D4B083] bg-white`}
                   required
               />
               {errors.name && (
-                  <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                  <p className="mt-1 text-sm text-red-300">{errors.name}</p>
               )}
             </div>
 
             <div>
               <label className="block mb-1 text-sm text-[#D4B083] font-medium">
-                Zúčastníte se? <span className="text-red-500">*</span>
+                Zúčastníte se? <span className="text-red-300">*</span>
               </label>
               <select
                   name="attendance"
-                  className={`w-full border ${errors.attendance ? 'border-red-500' : 'border-[#D4B083]/40'} rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4B083]`}
+                  className={`w-full border ${errors.attendance ? 'border-red-300' : 'border-[#D4B083]/40'} rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4B083]`}
                   required
               >
                 <option value="">-- Vyberte --</option>
@@ -122,7 +122,7 @@ export default function RsvpForm() {
                 <option value="no">Bohužel se nezúčastním</option>
               </select>
               {errors.attendance && (
-                  <p className="mt-1 text-sm text-red-500">{errors.attendance}</p>
+                  <p className="mt-1 text-sm text-red-400">{errors.attendance}</p>
               )}
             </div>
 
