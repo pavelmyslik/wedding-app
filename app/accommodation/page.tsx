@@ -28,25 +28,28 @@ export default function Page() {
 
   return (
     <section id="accommodation" className="py-20 px-6 bg-[#F7F5F2]">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-serif font-semibold text-[#D4B083] mb-2">Ubytování</h2>
-          <div className="w-16 h-0.5 bg-[#D4B083] mx-auto mb-6 rounded"></div>
+          <div className="w-16 h-0.5 bg-[#D4B083] mx-auto mb-6 rounded" />
           <p className="text-base text-[#222222] font-serif leading-relaxed">
-            Pro vaše pohodlí jsme připravili výběr kvalitních ubytovacích zařízení v blízkosti místa konání.
+            Pro vaše pohodlí jsme připravili výběr ubytovacích možností v blízkosti místa konání svatby.
           </p>
         </div>
 
-        <div className="space-y-10">
+        <div className="grid md:grid-cols-2 gap-8">
           {accommodations.map((hotel) => (
-            <article key={hotel.id} className="border-b border-[#D4B083]/20 pb-8 last:border-0">
-              <h3 className="text-2xl font-semibold text-[#D4B083] mb-1">{hotel.name}</h3>
-              <p className="text-[#222222] italic mb-3 text-sm">{hotel.description}</p>
+            <article
+              key={hotel.id}
+              className="bg-white shadow-sm border border-[#D4B083]/20 rounded-lg p-6 transition hover:shadow-md"
+            >
+              <h3 className="text-xl font-semibold text-[#D4B083] mb-2">{hotel.name}</h3>
+              <p className="text-sm italic text-[#444] mb-3">{hotel.description}</p>
 
-              <p className="text-[#222222] font-serif text-sm mb-1">{hotel.address}</p>
+              <p className="text-sm text-[#222222] mb-1">{hotel.address}</p>
               <a
                 href={`tel:${hotel.phone}`}
-                className="text-[#222222] font-serif text-sm hover:text-[#BFA16B] transition-colors block mb-3"
+                className="text-sm text-[#222222] hover:text-[#BFA16B] block mb-4"
               >
                 {hotel.phone}
               </a>
@@ -55,7 +58,7 @@ export default function Page() {
                 href={hotel.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-[#D4B083] font-semibold border border-[#D4B083] rounded px-4 py-1 text-sm hover:bg-[#D4B083] hover:text-white transition-colors"
+                className="inline-block text-sm text-white bg-[#D4B083] hover:bg-[#c8a76f] px-4 py-1.5 rounded transition"
               >
                 Více informací
               </a>

@@ -39,9 +39,17 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#F7F5F2]/90 backdrop-blur-md shadow-md z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
-        <div className="text-2xl font-script text-[#D4B083] font-bold cursor-pointer" onClick={() => scrollToSection("hero")}>
-          Lucie & Pavel
-        </div>
+        <div
+        className="cursor-pointer"
+        onClick={() => scrollToSection("hero")}
+      >
+        <img
+          src="/images/wedding-logo.png"
+          alt="Svatební logo"
+          className="w-24 h-auto mx-auto"
+        />
+      </div>
+
 
         <ul className="hidden md:flex space-x-8 font-serif text-[#222222]">
           {sections.map(({ id, label }) => (
