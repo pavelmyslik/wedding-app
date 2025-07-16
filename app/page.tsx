@@ -10,17 +10,28 @@ import RsvpForm from "@/app/components/RSVP"
 export default function Home() {
   return (
     <main className="bg-champagne text-black font-serif">
-
       <Navbar />
-      <HeroSection />
-      <Countdown />
-      <Schedule />
-      <RsvpForm />
-      <LocationMap />
-      <DressCode />
-      <Accommodation />
-
-
+      <section id="hero">
+        <HeroSection />
+      </section>
+      <section id="countdown">
+        <Countdown />
+      </section>
+      <section id="schedule">
+        <Schedule />
+      </section>
+      <section id="location">
+        <LocationMap />
+      </section>
+      <section id="dresscode">
+        <DressCode />
+      </section>
+      <section id="accommodation">
+        <Accommodation />
+      </section>
+      <section id="rsvp">
+        <RsvpForm />
+      </section>
 
       <footer className="py-8 text-center text-sm text-white bg-black">
         &copy; 2025 Lucie & Pavel
@@ -28,3 +39,4 @@ export default function Home() {
     </main>
   );
 }
+

@@ -82,7 +82,7 @@ export default function RsvpForm() {
           <h2 className="text-4xl font-semibold text-[#D4B083] mb-2">Potvrzení účasti</h2>
           <div className="w-16 h-0.5 bg-[#D4B083] mx-auto mb-8 rounded" />
           <p className="mb-10 text-base">
-            Budeme moc rádi, když s námi oslavíte náš velký den!
+            Budeme moc rádi, když s námi oslavíte náš velký den! <br />
             Prosíme o vyplnění následujícího RSVP formuláře, abychom mohli vše co nejlépe připravit.
           </p>
 

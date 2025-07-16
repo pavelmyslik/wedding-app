@@ -27,23 +27,24 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="text-center py-10">
-      <h2 className="text-2xl md:text-3xl font-serif text-[#D4B083] mb-4">Do svatby zbývá:</h2>
-      <div className="flex justify-center gap-6 text-lg md:text-xl font-serif text-[#222]">
-        <div className="text-center">
-          <div className="text-3xl font-bold">{timeLeft.days}</div>
+    <div className="text-center mb-12 mt-12">
+      <h2 className="text-4xl font-serif font-semibold text-[#D4B083] mb-2">Do svatby zbývá:</h2>
+      <div className="w-16 h-0.5 bg-[#D4B083] mx-auto mb-6 rounded"></div>
+      <div className="flex justify-center gap-12 text-xl md:text-2xl font-serif text-[#222]">
+        <div className="flex flex-col gap-2 text-center">
+          <div className="text-6xl font-bold">{timeLeft.days}</div>
           <div>dní</div>
         </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold">{timeLeft.hours}</div>
+        <div className="flex flex-col gap-2 text-center">
+          <div className="text-6xl font-bold">{timeLeft.hours}</div>
           <div>hodin</div>
         </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold">{timeLeft.minutes}</div>
+        <div className="flex flex-col gap-2 text-center">
+          <div className="text-6xl font-bold">{timeLeft.minutes}</div>
           <div>minut</div>
         </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold">{timeLeft.seconds}</div>
+        <div className="flex flex-col gap-2 text-center">
+          <div className="text-6xl font-bold">{timeLeft.seconds}</div>
           <div>sekund</div>
         </div>
       </div>

@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 
 const sections = [
   { id: "hero", label: "Úvod" },
+  { id: "countdown", label: "Čas" },
+  { id: "schedule", label: "Harmonogram" },
   { id: "location", label: "Místo konání" },
   { id: "dresscode", label: "Dresscode" },
   { id: "accommodation", label: "Ubytování" },
+  { id: "rsvp", label: "RSVP" },
 ];
 
 export default function Navbar() {
