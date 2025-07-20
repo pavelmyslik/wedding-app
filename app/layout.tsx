@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Budeme Myslíkovi",
   icons: {
-    icon:"favicon.ico"
+    icon:"/favicon.ico"
   }
 };
 

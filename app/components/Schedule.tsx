@@ -2,13 +2,14 @@ import AccordionSection from "./subcomponents/Section";
 
 export default function Schedule() {
   const events = [
-    { time: "12:00", title: "Příjezd hostů" },
+    { time: "12:30", title: "Příjezd hostů" },
     { time: "13:00", title: "Svatební obřad" },
-    { time: "13:45", title: "Společné focení" },
-    { time: "14:15", title: "Oběd" },
+    { time: "13:30", title: "Společné focení" },
+    { time: "14:00", title: "Společný oběd" },
     { time: "15:30", title: "Krájení dortu" },
-    { time: "18:00", title: "První tanec" },
-    { time: "19:00", title: "Zábava a tanec" },
+    { time: "17:30", title: "První tanec" },
+    { time: "18:00", title: "Gurmánská pauza" },
+    { title: "Večerní párty" },
   ];
 
   return (
@@ -29,7 +30,7 @@ export default function Schedule() {
               <div className={`w-1/2 px-4 ${index % 2 === 0 ? 'text-right' : 'opacity-0'}`}>
                 {index % 2 === 0 && (
                   <>
-                    <p className="text-[#D4B083] font-semibold text-lg">{event.time}</p>
+                    <p className="text-[#D4B083] font-semibold text-lg">{event?.time}</p>
                     <p className="text-base">{event.title}</p>
                   </>
                 )}
@@ -40,7 +41,7 @@ export default function Schedule() {
               <div className={`w-1/2 px-4 ${index % 2 !== 0 ? 'text-left' : 'opacity-0'}`}>
                 {index % 2 !== 0 && (
                   <>
-                    <p className="text-[#D4B083] font-semibold text-lg">{event.time}</p>
+                    <p className="text-[#D4B083] font-semibold text-lg">{event?.time}</p>
                     <p className="text-base">{event.title}</p>
                   </>
                 )}

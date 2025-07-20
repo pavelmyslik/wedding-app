@@ -134,7 +134,7 @@ export default function RsvpForm() {
                   name="message"
                   rows={4}
                   className="w-full border border-[#D4B083]/40 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#D4B083] bg-white"
-                  placeholder="Např. máme dietní omezení, vezmeme s sebou děti atd."
+                  placeholder="Např. máme dietní omezení, jsem vegetarián, vezmeme s sebou děti atd."
               />
             </div>
 

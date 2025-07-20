@@ -3,14 +3,6 @@ import AccordionSection from "./subcomponents/Section";
 export default function Accommodation() {
   const accommodations = [
     {
-      id: 1,
-      name: "Statek Slatina",
-      address: "Slatina 1, 345 25 Hostouň u Horšovského Týna",
-      phone: "+420 721 050 867",
-      website: "https://www.instagram.com/statek_slatina/?hl=cs",
-      description: "Chatičky po dvou osobách",
-    },
-    {
       id: 2,
       name: "Penzion Mutěnín (6 km)",
       address: "Mutěnín 35, 345 25 Mutěnín",
